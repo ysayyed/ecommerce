@@ -1,0 +1,18 @@
+[
+  {
+    "name": "John doe",
+    "email": "john@example.com",
+    "password": "john*123",
+    "role": "user",
+    "isActive": true,
+    "totalOrders": 0
+  },
+  {
+    "name": "Application admin",
+    "email": "admin@example.com",
+    "password": "admin*123",
+    "role": "admin",
+    "isActive": true,
+    "totalOrders": 0
+  }
+]
