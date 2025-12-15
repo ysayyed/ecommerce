@@ -9,6 +9,7 @@ import { SeedModule } from './database/seed.module';
 import { CartModule } from './cart/cart.module';
 import { OrdersModule } from './orders/orders.module';
 import { DiscountModule } from './discount/discount.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { DiscountModule } from './discount/discount.module';
     CartModule,
     OrdersModule,
     DiscountModule,
+    AdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],
