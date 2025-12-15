@@ -140,11 +140,14 @@ export class AdminService {
     }
 
     // Generate JWT token
-    const token = this.jwtService.sign({
-      id: user._id,
-      email: user.email,
-      role: user.role,
-    });
+    const token = this.jwtService.sign(
+      {
+        id: user._id,
+        email: user.email,
+        role: user.role,
+      },
+      { secret: this.configService.get('JWT_SECRET', 'your-secret-key') },
+    );
 
     return {
       access_token: token,
