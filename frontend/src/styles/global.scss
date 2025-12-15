@@ -1,0 +1,350 @@
+@use 'sass:color';
+@use './colors' as *;
+
+// Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bg-secondary;
+  color: $text-primary;
+}
+
+// Global Button Styles
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  background-color: $color-black;
+  color: $color-white;
+  
+  &:hover:not(:disabled) {
+    background-color: $color-dark-grey;
+  }
+}
+
+.btn-secondary {
+  background-color: $color-grey;
+  color: $color-white;
+  
+  &:hover:not(:disabled) {
+    background-color: $color-dark-grey;
+  }
+}
+
+.btn-danger {
+  background-color: $color-error;
+  color: $color-white;
+  
+  &:hover:not(:disabled) {
+    background-color: color.adjust($color-error, $lightness: -10%);
+  }
+}
+
+.btn-success {
+  background-color: $color-success;
+  color: $color-white;
+  
+  &:hover:not(:disabled) {
+    background-color: color.adjust($color-success, $lightness: -10%);
+  }
+}
+
+// Global Input Styles
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background-color: $color-white;
+  
+  &:focus {
+    outline: none;
+    border-color: $color-black;
+  }
+  
+  &.error {
+    border-color: $color-error;
+  }
+}
+
+.input-group {
+  margin-bottom: 16px;
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+}
+
+// Global Checkbox Styles
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+// Global Radio Button Styles
+.radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+// Card Component
+.card {
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+// Alert Messages
+.alert {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  
+  &.alert-error {
+    background-color: color.adjust($color-error, $lightness: 40%);
+    color: $color-error;
+    border: 1px solid $color-error;
+  }
+  
+  &.alert-success {
+    background-color: color.adjust($color-success, $lightness: 50%);
+    color: color.adjust($color-success, $lightness: -10%);
+    border: 1px solid $color-success;
+  }
+  
+  &.alert-warning {
+    background-color: color.adjust($color-warning, $lightness: 40%);
+    color: color.adjust($color-warning, $lightness: -30%);
+    border: 1px solid $color-warning;
+  }
+}
+
+// Navbar
+.navbar {
+  background-color: $color-white;
+  border-bottom: 1px solid $border-color;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-primary;
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    
+    a {
+      color: $text-primary;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $color-grey;
+      }
+      
+      &.active {
+        color: $color-black;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Side Panel
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: $color-white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  
+  &.open {
+    right: 0;
+  }
+  
+  .side-panel-header {
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: $text-secondary;
+      
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+  
+  .side-panel-content {
+    padding: 20px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  
+  &.show {
+    display: block;
+  }
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Grid System
+.grid {
+  display: grid;
+  gap: 20px;
+  
+  &.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  &.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  &.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    &.grid-2,
+    &.grid-3,
+    &.grid-4 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Loading Spinner
+.spinner {
+  border: 3px solid $color-light-grey;
+  border-top: 3px solid $color-black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Table
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $color-white;
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  th {
+    font-weight: 600;
+    background-color: $bg-secondary;
+  }
+  
+  tr:hover {
+    background-color: $bg-secondary;
+  }
+}
