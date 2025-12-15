@@ -29,3 +29,10 @@ A full-stack e-commerce application built with NestJS, React, MongoDB, and Docke
   createdAt: Date;
 }
 ```
+
+## 🔌 API Endpoints
+
+### Authentication
+
+- `POST /auth/signup` - User registration
+- `POST /auth/login` - User login
