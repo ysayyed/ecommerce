@@ -13,3 +13,19 @@ A full-stack e-commerce application built with NestJS, React, MongoDB, and Docke
 - **Authentication:** JWT (JSON Web Tokens) with Passport
 - **Validation:** class-validator & class-transformer
 - **Security:** bcrypt for password hashing
+
+## 📦 Database Schema
+
+### User Schema
+
+```typescript
+{
+  name: string;
+  email: string(unique);
+  password: string(hashed);
+  role: "user" | "admin";
+  isActive: boolean;
+  totalOrders: number;
+  createdAt: Date;
+}
+```
