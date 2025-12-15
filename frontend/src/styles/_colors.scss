@@ -1,0 +1,26 @@
+// Color Variables
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #808080;
+$color-light-grey: #f5f5f5;
+$color-dark-grey: #333333;
+$color-border-grey: #e0e0e0;
+
+// Status Colors
+$color-error: #dc3545;
+$color-success: #28a745;
+$color-warning: #ffc107;
+
+// Background Colors
+$bg-primary: $color-white;
+$bg-secondary: $color-light-grey;
+$bg-dark: $color-dark-grey;
+
+// Text Colors
+$text-primary: $color-black;
+$text-secondary: $color-grey;
+$text-light: $color-white;
+
+// Border Colors
+$border-color: $color-border-grey;
+$border-dark: $color-grey;

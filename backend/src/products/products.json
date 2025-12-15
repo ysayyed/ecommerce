@@ -1,0 +1,102 @@
+[
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8583"
+    },
+    "name": "Xiaomi Redmi Note 13",
+    "price": 16999,
+    "stock": 700,
+    "imageUrl": "https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg",
+    "description": "AMOLED display"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8586"
+    },
+    "name": "OnePlus 11R",
+    "price": 39999,
+    "stock": 250,
+    "imageUrl": "https://m.media-amazon.com/images/I/613SAOPmLeL._SX679_.jpg",
+    "description": "Value flagship"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec858b"
+    },
+    "name": "Oppo Reno 11 Pro",
+    "price": 39999,
+    "stock": 300,
+    "imageUrl": "https://m.media-amazon.com/images/I/41Fvm7HOJML.jpg",
+    "description": "Stylish design"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8589"
+    },
+    "name": "Vivo X100 Pro",
+    "price": 89999,
+    "stock": 180,
+    "imageUrl": "https://m.media-amazon.com/images/I/71mwKuVAMmL._SX679_.jpg",
+    "description": "Professional camera system"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8580"
+    },
+    "name": "Samsung Galaxy A55",
+    "price": 38999,
+    "stock": 350,
+    "imageUrl": "https://m.media-amazon.com/images/I/81pQfKZBmXL._SX679_.jpg",
+    "description": "Mid-range Android phone"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec858a"
+    },
+    "name": "Vivo V30 Pro",
+    "price": 42999,
+    "stock": 260,
+    "imageUrl": "https://m.media-amazon.com/images/I/61vxwwIEnXL._SX679_.jpg",
+    "description": "Curved AMOLED display"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec857e"
+    },
+    "name": "Samsung Galaxy S24",
+    "price": 79999,
+    "stock": 150,
+    "imageUrl": "https://m.media-amazon.com/images/I/31KL9hqsMBL._SY300_SX300_QL70_FMwebp_.jpg",
+    "description": "Flagship Android smartphone"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec858e"
+    },
+    "name": "Realme 12 Pro+",
+    "price": 31999,
+    "stock": 380,
+    "imageUrl": "https://m.media-amazon.com/images/I/41J61fLwxiL._SY300_SX300_QL70_FMwebp_.jpg",
+    "description": "Curved display"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8590"
+    },
+    "name": "Motorola Moto G84",
+    "price": 19999,
+    "stock": 500,
+    "imageUrl": "https://m.media-amazon.com/images/I/611bhCxuo7L._SY879_.jpg",
+    "description": "Affordable AMOLED"
+  },
+  {
+    "_id": {
+      "$oid": "691fc72d155a533691ec8585"
+    },
+    "name": "OnePlus 12",
+    "price": 69999,
+    "stock": 200,
+    "imageUrl": "https://m.media-amazon.com/images/I/71o8VehMHXL._SX679_.jpg",
+    "description": "Flagship performance"
+  }
+]
