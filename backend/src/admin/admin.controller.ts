@@ -13,8 +13,6 @@ import { Roles } from '../auth/roles.decorator';
 import { LoginDto } from 'src/auth/dto/login.dto';
 
 @Controller('admin')
-@UseGuards(JwtAuthGuard, RolesGuard)
-@Roles('admin')
 export class AdminController {
   constructor(private readonly adminService: AdminService) {}
 
@@ -23,11 +21,15 @@ export class AdminController {
     return this.adminService.adminLogin(loginDto);
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin')
   @Get('analytics')
   async getAnalytics() {
     return this.adminService.getAnalytics();
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin')
   @Get('nth-order-value')
   async getNthOrderValue() {
     return {
@@ -35,16 +37,22 @@ export class AdminController {
     };
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin')
   @Get('orders')
   async getAllOrders() {
     return this.adminService.getAllOrders();
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin')
   @Get('users')
   async getAllUsers() {
     return this.adminService.getAllUsers();
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin')
   @Get('products')
   async getAllProducts() {
     return this.adminService.getAllProducts();

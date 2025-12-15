@@ -5,7 +5,7 @@ A full-stack e-commerce application built with NestJS, React, MongoDB, and Docke
 ## 🤔 Assumptions
 
 - **Discount code notification:** Assumed that discount code will be available for the respective user while checkout
-- **Discode code is auto generated:** Discount code is auto generated, because of the requirement of processing discound codes at each nth order
+- **Discount code is auto generated:** Discount code is auto generated, because of the requirement of processing discound codes at each nth order
 
 ## 😇 Sincere Acknowledgements
 
